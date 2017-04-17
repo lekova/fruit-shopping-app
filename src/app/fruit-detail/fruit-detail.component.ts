@@ -12,6 +12,6 @@ export class FruitDetailComponent implements OnInit {
 
   ngOnInit() {
     const fr = FruitsData[0];
-    this.fruit = new Fruit(fr.name, fr.price, fr.description, fr.calories, fr.img);
+    this.fruit = new Fruit(fr.id, fr.name, fr.price, fr.description, fr.calories, fr.img);
   }
 }

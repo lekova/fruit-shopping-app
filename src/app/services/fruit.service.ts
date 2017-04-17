@@ -11,4 +11,8 @@ export class FruitService {
     console.log('insede getFruits!!!!!!!!!!!!!!!!!');
     return Promise.resolve(FruitsData);
   }
+
+  getFruit(id: number) {
+    return FruitsData.find(el => el.id === id);
+  }
 }
