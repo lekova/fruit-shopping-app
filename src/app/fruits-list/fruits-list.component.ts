@@ -9,11 +9,19 @@ import { FruitService } from '../services/fruit.service';
 })
 export class FruitsListComponent implements OnInit {
   fruits: Fruit[];
+  totalCount: number; // TODO find why it doesn't work with fruits.length
 
   constructor(private fruitService: FruitService) { }
 
   ngOnInit() {
-    this.fruits = this.fruitService.getFruits();
+    this.getFruits();
   }
 
+  getFruits(): void {
+    this.fruitService.getFruits().then(result => {
+      this.totalCount = result.length;
+      return this.fruits = result;
+    });
+  }
 }
+
