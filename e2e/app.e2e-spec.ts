@@ -1,10 +1,10 @@
-import { VeggieShoppingAppPage } from './app.po';
+import { FruitShoppingAppPage } from './app.po';
 
-describe('veggie-shopping-app App', () => {
-  let page: VeggieShoppingAppPage;
+describe('fruit-shopping-app App', () => {
+  let page: FruitShoppingAppPage;
 
   beforeEach(() => {
-    page = new VeggieShoppingAppPage();
+    page = new FruitShoppingAppPage();
   });
 
   it('should display message saying app works', () => {
