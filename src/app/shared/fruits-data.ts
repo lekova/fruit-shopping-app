@@ -2,6 +2,7 @@ import { Fruit } from '../shared/fruit';
 
 export const FruitsData: Fruit[] = [
   {
+    id: 1,
     name: 'red apple',
     price: 0.5,
     description: 'Eat one every day to keep the doctor away!',
@@ -9,6 +10,7 @@ export const FruitsData: Fruit[] = [
     calories: 95
   },
   {
+    id: 2,
     name: 'Avocado',
     price: 0.8,
     description: 'Guacamole anyone?',
@@ -16,6 +18,7 @@ export const FruitsData: Fruit[] = [
     calories: 234
   },
   {
+    id: 3,
     name: 'Banana',
     price: 0.47,
     description: 'These are rich in Potassium and easy to peel.',
@@ -23,6 +26,7 @@ export const FruitsData: Fruit[] = [
     calories: 105
   },
   {
+    id: 4,
     name: 'Cantaloupe',
     price: 2.5,
     description: 'Delicious and refreshing.',
@@ -30,6 +34,7 @@ export const FruitsData: Fruit[] = [
     calories: 95
   },
   {
+    id: 5,
     name: 'Grape',
     price: 2.3,
     description: 'Wine is great, but grapes are even better.',
@@ -37,6 +42,7 @@ export const FruitsData: Fruit[] = [
     calories: 95
   },
   {
+    id: 6,
     name: 'Fig',
     price: 4.5,
     description: ' Figs have a 55% natural sugar content, making them the sweetest of all fruits.',
@@ -44,6 +50,7 @@ export const FruitsData: Fruit[] = [
     calories: 21
   },
   {
+    id: 7,
     name: 'Grapefruit',
     price: 1.5,
     description: 'Grapefruits are an excellent source of vitamin C (important for wound healing and iron absorption).',
@@ -51,6 +58,7 @@ export const FruitsData: Fruit[] = [
     calories: 52
   },
   {
+    id: 8,
     name: 'Guava',
     price: 1.35,
     description: 'Guava fruit is soft when ripe with sweet musky aroma and creamy texture.',
@@ -58,6 +66,7 @@ export const FruitsData: Fruit[] = [
     calories: 61
   },
   {
+    id: 9,
     name: 'Watermelon',
     price: 2.15,
     description: 'Watermelon is a great addition to smoothies, salsa, and salads.',
@@ -65,6 +74,7 @@ export const FruitsData: Fruit[] = [
     calories: 46
   },
   {
+    id: 10,
     name: 'Pear',
     price: 0.97,
     description: 'Pears are moderately high in sugar and have a fairly high amount of fiber.',
@@ -72,6 +82,7 @@ export const FruitsData: Fruit[] = [
     calories: 102
   },
   {
+    id: 11,
     name: 'Kiwi',
     price: 0.35,
     description: 'Kiwis are low in calories and carbohydrate. They are also rich in vitamin C and fiber.',
@@ -79,6 +90,7 @@ export const FruitsData: Fruit[] = [
     calories: 42
   },
   {
+    id: 12,
     name: 'Tangerine',
     price: 0.15,
     description: 'Tangerines are a diverse type of citrus fruit that range in flavor — from very sweet to tart.',
@@ -86,6 +98,7 @@ export const FruitsData: Fruit[] = [
     calories: 91
   },
   {
+    id: 13,
     name: 'Lychee',
     price: 7.00,
     description: 'Lychee fruits originated in China and Vietnam. They are high in vitamin C, B-complex vitamins, and potassium.',
@@ -93,6 +106,7 @@ export const FruitsData: Fruit[] = [
     calories: 6
   },
   {
+    id: 14,
     name: 'Mango',
     price: 1.80,
     description: 'Оne mango has all the vitamin C you need for a whole day.',
@@ -100,6 +114,7 @@ export const FruitsData: Fruit[] = [
     calories: 201
   },
   {
+    id: 15,
     name: 'Papaya',
     price: 1.80,
     description: 'Papayas are an excellent source of fiber, racking in about 10 percent of your daily needs in a cups worth.',
@@ -107,6 +122,7 @@ export const FruitsData: Fruit[] = [
     calories: 334
   },
   {
+    id: 16,
     name: 'Orange',
     price: 1.80,
     description: 'Oranges are also a good source of potassium, thiamin, and folate. Potassium can help to lower blood pressure.',
@@ -114,6 +130,7 @@ export const FruitsData: Fruit[] = [
     calories: 62
   },
   {
+    id: 17,
     name: 'Peach',
     price: 1.80,
     description: 'Peaches are a stone fruit that are moderate in size, with a juicy, sweet flesh.',
@@ -121,6 +138,7 @@ export const FruitsData: Fruit[] = [
     calories: 199
   },
   {
+    id: 18,
     name: 'Strawberry',
     price: 1.80,
     description: 'Strawberries have sweet taste and their plump texture makes a great addition to healthy dessert choices.',
@@ -128,6 +146,7 @@ export const FruitsData: Fruit[] = [
     calories: 47
   },
   {
+    id: 19,
     name: 'Pineapple',
     price: 1.80,
     description: 'Pineapples are also the only source of the plant compound bromelain.Bromelain is associated with many health benefits, such as enhanced immune function, cancer prevention, improved wound healing and better gut health',
@@ -135,6 +154,7 @@ export const FruitsData: Fruit[] = [
     calories: 82
   },
   {
+    id: 20,
     name: 'Pomegranate',
     price: 1.80,
     description: 'The name \'pomegranate\' comes from the French words pom grenate, or \'seeded apple.\'. Pomegranates originated from tropical Asia and spread throughout the Mediterranean region and the Middle East.',
@@ -142,6 +162,7 @@ export const FruitsData: Fruit[] = [
     calories: 95
   },
   {
+    id: 21,
     name: 'Persimmon',
     price: 0.69,
     description: 'Persimmons look like a bright orange tomato, but they are actually a nutritious and sweet fruit. They come in two varieties: fuya and hachiya.',
