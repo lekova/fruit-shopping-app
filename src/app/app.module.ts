@@ -20,7 +20,7 @@ import { FruitService } from './services/fruit.service';
     FormsModule,
     HttpModule
   ],
-  providers: [ FruitService],
+  providers: [FruitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

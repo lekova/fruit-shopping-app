@@ -7,7 +7,8 @@ export class FruitService {
 
   constructor() { }
 
-  getFruits(): Fruit[] {
-    return FruitsData;
+  getFruits(): Promise<Fruit[]> {
+    console.log('insede getFruits!!!!!!!!!!!!!!!!!');
+    return Promise.resolve(FruitsData);
   }
 }
