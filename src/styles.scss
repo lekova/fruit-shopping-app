@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+.table td.tdRight {
+    text-align: right
+}
+
+.table td.tdCenter {
+    text-align: center
+}
+
+.table-nonfluid {
+    width: auto
+}
+
+
+a.actions {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.shopping-cart {
+    width: 15px;
+    height: 15px;
+}
+
+
+.customer-form {
+    margin-top: 40px;
+}
