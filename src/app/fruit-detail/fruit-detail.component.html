@@ -1,83 +1,90 @@
 <div class="container">
-  <p class="text-info ">
-      <img src="{{fruit.img}}" alt="{{fruit.name}}"> <strong>{{fruit.name}}</strong>: {{fruit.description}}
-      <br>
-  </p>
   <div class="row-fluid ">
-      <div class="col-md-8">
-          <table class="table table-bordered">
-              <tbody>
-                  <tr class="well">
-                      <td class="tdRight" colspan="3">
-                          <a href="./cart.html" title="go to shopping cart">
-                              <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16757-200.png" alt="" class="shopping-cart">
-                              <b>15</b> items, <b>$90.00</b>
-                          </a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="tdRight"><b>Calories</b></td>
-                      <td class="tdCenter">
-                          <h2>{{fruit.calories}}</h2></td>
-                      <td></td>
-                  </tr>
-                  <tr >
-                      <td class="tdRight"><b>Carotenoid</b></td>
-                      <td class="tdCenter"><img src="../assets/r0.png" alt="0" ></td>
-                      <td>
-                          <b>Negligible</b>: below 5% of the recommended daily value.
-                      </td>
-                  </tr>
-                  <tr >
-                      <td class="tdRight"><b>Fiber</b></td>
-                      <td class="tdCenter"><img src="../assets/r2.png" alt="0" ></td>
-                      <td>
-                          <b>Average</b>: between 10 and 20% of the recommended daily value.
-                      </td>
-                  </tr>
-                  <tr >
-                      <td class="tdRight"><b>Folates</b></td>
-                      <td class="tdCenter"><img src="../assets/r2.png" alt="0" ></td>
-                      <td>
-                            <b>Negligible</b>: below 5% of the recommended daily value.
-                      </td>
-                  </tr>
-                  <tr >
-                      <td class="tdRight"><b>Potassium</b></td>
-                      <td class="tdCenter"><img src="../assets/r2.png" alt="0" ></td>
-                      <td>
-                          <b>Low</b>: between 5 and 10% of the recommended daily value.
-                      </td>
-                  </tr>
-                  <tr >
-                      <td class="tdRight"><b>Vitamin C</b></td>
-                      <td class="tdCenter"><img src="../assets/r2.png" alt="0" ></td>
-                      <td>
-                            <b>Average</b>: between 10 and 20% of the recommended daily value.
-                      </td>
-                  </tr>
+    <div class="col-md-8">
+      <p class="text-info">
+        <img src="{{fruit.img}}" alt="{{fruit.name}}"> <strong>{{fruit.name}}</strong>: {{fruit.description}}
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p class="alert alert-warning price-box">{{fruit.price | currency:USD:true}}</p>
+    </div>
+  </div>
+  <div class="row-fluid ">
+    <div class="col-md-8">
+      <table class="table table-bordered">
+        <tbody>
+          <tr class="well">
+            <td class="tdRight" colspan="3">
+              <a href="./cart.html" title="go to shopping cart">
+                <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16757-200.png" alt="" class="shopping-cart">
+                <b>15</b> items, <b>$90.00</b>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Calories</b></td>
+            <td class="tdCenter">
+              <h2>{{fruit.calories}}</h2>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Carotenoid</b></td>
+            <td class="tdCenter"><img src="../assets/r0.png" alt="0"></td>
+            <td>
+              <b>Negligible</b>: below 5% of the recommended daily value.
+            </td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Fiber</b></td>
+            <td class="tdCenter"><img src="../assets/r2.png" alt="0"></td>
+            <td>
+              <b>Average</b>: between 10 and 20% of the recommended daily value.
+            </td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Folates</b></td>
+            <td class="tdCenter"><img src="../assets/r2.png" alt="0"></td>
+            <td>
+              <b>Negligible</b>: below 5% of the recommended daily value.
+            </td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Potassium</b></td>
+            <td class="tdCenter"><img src="../assets/r2.png" alt="0"></td>
+            <td>
+              <b>Low</b>: between 5 and 10% of the recommended daily value.
+            </td>
+          </tr>
+          <tr>
+            <td class="tdRight"><b>Vitamin C</b></td>
+            <td class="tdCenter"><img src="../assets/r2.png" alt="0"></td>
+            <td>
+              <b>Average</b>: between 10 and 20% of the recommended daily value.
+            </td>
+          </tr>
 
-                  <tr class="well">
-                      <td class="tdRight" colspan="3">
-                          <a href="cart.html" title="go to shopping cart">
-                              <b>15</b> items, <b>$90.00</b>
-                          </a>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-      <!-- buttons -->
-      <div class="col-md-4">
-          <button class="btn btn-block btn-success">
+          <tr class="well">
+            <td class="tdRight" colspan="3">
+              <a href="cart.html" title="go to shopping cart">
+                <b>15</b> items, <b>$90.00</b>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- buttons -->
+    <div class="col-md-4">
+      <button class="btn btn-block btn-success">
               <i class="icon-shopping-cart icon-white"></i> add to cart
           </button>
-          <button class="btn btn-block btn-info">
+      <button class="btn btn-block btn-info">
               <i class="icon-trash icon-white"></i> add to wish list
           </button>
-          <button class="btn btn-block btn-warning">
+      <button class="btn btn-block btn-warning">
               <i class="icon-chevron-left"></i> back to store
           </button>
-      </div>
+    </div>
   </div>
 </div>
