@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fruit } from '../shared/fruit';
+import { FruitsData } from '../shared/fruits-data';
 @Component({
   selector: 'app-fruit-detail',
   templateUrl: './fruit-detail.component.html',
@@ -10,6 +11,7 @@ export class FruitDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.fruit = new Fruit('Red apple', 0.6, 'Eat one every day to keep the doctor away!', '../assets/products/apple.jpg');
+    const fr = FruitsData[0];
+    this.fruit = new Fruit(fr.name, fr.price, fr.description, fr.calories, fr.img);
   }
 }
