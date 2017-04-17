@@ -1,4 +1,6 @@
-export const FruitsData = [
+import { Fruit } from '../shared/fruit';
+
+export const FruitsData: Fruit[] = [
   {
     name: 'red apple',
     price: 0.5,

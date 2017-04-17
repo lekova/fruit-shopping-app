@@ -5,18 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FruitDetailComponent } from './fruit-detail/fruit-detail.component';
+import { FruitsListComponent } from './fruits-list/fruits-list.component';
+
+import { FruitService } from './services/fruit.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FruitDetailComponent
+    FruitDetailComponent,
+    FruitsListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ FruitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
