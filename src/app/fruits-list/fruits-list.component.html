@@ -5,25 +5,30 @@
     <br> When you are done, click the shopping cart icon to review your order and check out.
   </p>
   <div class="row">
-    <div class="col-md-6">
-      <p>
-        Search:
-        <input type="text" />
-      </p>
+    <div class="col-md-8">
+      <div class="search-box">
+        <input class="form-control" placeholder="Search Fruits..." type="text">
+      </div>
     </div>
-    <div class="col-md-6 text-right">
-      <div class="col-sm-offset-5 col-md-4 pull-left">
-        Sort by:
-        <select>
-					    <option value="volvo">Name</option>
-					    <option value="saab">Price</option>
-					</select>
+    <div class="col-md-2">
+      <div class="col-md-8 pull-left">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+            <a class="actions">Sort by</a>
+            <span class="caret actions"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Name</a></li>
+            <li><a href="#">Price</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col-md-3 pull-left">
-        <a href="wishlist.html" class="actions">Wish list</a>
-      </div>
+    </div>
+    <div class="col-md-2 text-center pull-right">
+      <a href="#" class="actions btn">Wish list</a>
     </div>
   </div>
+
   <table class="table table-bordered">
     <tbody>
       <tr class="well">

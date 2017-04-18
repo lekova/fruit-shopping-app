@@ -1,3 +1,23 @@
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+
 .fruits:hover {
   background-color: #fcf8e3;
+}
+
+.btn .caret {
+  color: #337ab7;
+}
+
+.search-box {
+  margin-left: -15px;
+  max-width: 250px;
+}
+
+.btn.dropdown-toggle {
+  background-color: transparent;
 }
