@@ -8,8 +8,7 @@ import { FruitService } from '../services/fruit.service';
   styleUrls: ['./fruits-list.component.scss']
 })
 export class FruitsListComponent implements OnInit {
-  fruits: Fruit[];
-  totalCount: number; // TODO find why it doesn't work with fruits.length
+  fruits: Fruit[] = [];
 
   constructor(private fruitService: FruitService) { }
 
@@ -18,10 +17,7 @@ export class FruitsListComponent implements OnInit {
   }
 
   getFruits(): void {
-    this.fruitService.getFruits().then(result => {
-      this.totalCount = result.length;
-      return this.fruits = result;
-    });
+    this.fruitService.getFruits().then(result => this.fruits = result);
   }
 }
 
