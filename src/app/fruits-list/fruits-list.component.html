@@ -18,8 +18,8 @@
             <span class="caret actions"></span>
           </button>
           <ul class="dropdown-menu">
-            <li><a href="#">Name</a></li>
-            <li><a href="#">Price</a></li>
+            <li (click)="sortByName()"><a>Name</a></li>
+            <li (click)="sortByPrice()"><a href="#">Price</a></li>
           </ul>
         </div>
       </div>
@@ -63,4 +63,29 @@
       </tr>
     </tbody>
   </table>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+       <thead>
+        <tr>
+          <th class="col-sm-1">#</th>
+          <th class="col-sm-1">Image</th>
+          <th class="col-sm-2">Name</th>
+          <th class="col-sm-6 table-left">Description</th>
+          <th class="col-sm-1">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fruit of fruits; let i = index">
+          <td>{{i + 1}}</td>
+          <td><img src="{{fruit.img}}" alt="{{fruit.name}}"></td>
+          <td class="text-decor">{{fruit.name}}</td>
+          <td class="table-left">{{fruit.description}}</td>
+          <td><span class="text-decor">{{fruit.price | currency:UDS:true}}</span></td>
+          <td class="col-sm-1"><a class="actions">add to cart</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>

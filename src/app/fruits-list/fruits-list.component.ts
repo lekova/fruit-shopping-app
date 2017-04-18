@@ -26,12 +26,12 @@ export class FruitsListComponent implements OnInit {
     this.selectedFruit = fruit;
   }
 
-  sortByPrice(fruits: Fruit[]) {
-    return fruits.sort((a, b) => a.price - b.price);
+  sortByPrice() {
+    return this.fruits.sort((a, b) => a.price - b.price);
   }
 
-  sortByName(fruits: Fruit[]) {
-    return fruits.sort((a, b) => {
+  sortByName() {
+    return this.fruits.sort((a, b) => {
       const x = a.name.toLowerCase();
       const y = b.name.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
