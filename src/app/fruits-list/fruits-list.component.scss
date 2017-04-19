@@ -5,10 +5,6 @@
   margin-top:10px;
 }
 
-.fruits:hover {
-  background-color: #fcf8e3;
-}
-
 .btn .caret {
   color: #337ab7;
 }
@@ -25,6 +21,10 @@
 .table td {
    text-align: center;
    vertical-align: middle;
+}
+
+.table tr:hover{
+  background-color: #fcf8e3;
 }
 
 .table-left {

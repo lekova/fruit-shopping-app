@@ -29,41 +29,6 @@
     </div>
   </div>
 
-  <table class="table table-bordered">
-    <tbody>
-      <tr class="well">
-        <td class="tdCenter"></td>
-        <td class="tdCenter"></td>
-        <td class="tdCenter"></td>
-        <td class="tdRight" colspan="4">
-          <a href="cart.html" title="go to shopping cart">
-            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16757-200.png" alt="" class="shopping-cart">
-            <b>15</b> items, <b>$90.00</b>
-          </a>
-        </td>
-      </tr>
-      <tr class="fruits" *ngFor="let fruit of fruits">
-        <td class="tdCenter"><img src="{{fruit.img}}" alt="{{fruit.name}}"></td>
-        <td>
-          <a href="./product-detail.html"><b>{{fruit.name}}</b></a>
-          <br>{{fruit.de3scription}}
-        </td>
-        <td class="tdRight">
-          {{fruit.price | currency:UDS:true}}
-        </td>
-        <td class="tdCenter">
-          <a class="actions">add to cart</a>
-        </td>
-      </tr>
-
-      <tr class="well">
-        <td class="tdRight" colspan="4">
-          <b>{{fruits.length}}</b> results
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
   <div class="table-responsive">
     <table class="table table-bordered">
        <thead>
@@ -73,6 +38,7 @@
           <th class="col-sm-2">Name</th>
           <th class="col-sm-6 table-left">Description</th>
           <th class="col-sm-1">Price</th>
+          <th class="col-sm-1">Shop</th>
         </tr>
       </thead>
       <tbody>
@@ -80,9 +46,9 @@
           <td>{{i + 1}}</td>
           <td><img src="{{fruit.img}}" alt="{{fruit.name}}"></td>
           <td class="text-decor">{{fruit.name}}</td>
-          <td class="table-left">{{fruit.description}}</td>
-          <td><span class="text-decor">{{fruit.price | currency:UDS:true}}</span></td>
-          <td class="col-sm-1"><a class="actions">add to cart</a></td>
+          <td><div class="table-left">{{fruit.description}}</div></td>
+          <td><strong>{{fruit.price | currency:UDS:true}}</strong></td>
+          <td><a class="actions">add to cart</a></td>
         </tr>
       </tbody>
     </table>
