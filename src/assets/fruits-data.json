@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "red apple",
+    "name": "Red apple",
     "price": 0.5,
     "description": "Eat one every day to keep the doctor away!",
     "img": "../assets/products/apple.jpg",
@@ -147,7 +147,7 @@
     "id": 19,
     "name": "Pineapple",
     "price": 1.80,
-    "description": "Pineapples are also the only source of the plant compound bromelain.Bromelain is associated with many health benefits, such as enhanced immune function, cancer prevention, improved wound healing and better gut health",
+    "description": "Pineapples are also the only source of the plant compound bromelain. Bromelain is associated with many health benefits, such as enhanced immune function, cancer prevention, improved wound healing and better gut health",
     "img": "../assets/products/mango.jpg",
     "calories": 82
   },
@@ -155,7 +155,7 @@
     "id": 20,
     "name": "Pomegranate",
     "price": 1.80,
-    "description": "The name 'pomegranate' comes from the French words pom grenate, or 'seeded apple.'. Pomegranates originated from tropical Asia and spread throughout the Mediterranean region and the Middle East.",
+    "description": "The name 'pomegranate' comes from the French words pom grenate, or 'seeded apple.' Pomegranates originated from tropical Asia and spread throughout the Mediterranean region and the Middle East.",
     "img": "../assets/products/pomegranate.jpg",
     "calories": 233
   },

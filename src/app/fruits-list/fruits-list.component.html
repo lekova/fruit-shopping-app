@@ -45,7 +45,7 @@
         <tr *ngFor="let fruit of fruits; let i = index">
           <td>{{i + 1}}</td>
           <td><img src="{{fruit.img}}" alt="{{fruit.name}}"></td>
-          <td class="text-decor">{{fruit.name}}</td>
+          <td><a class="actions">{{fruit.name}}</a></td>
           <td><div class="table-left">{{fruit.description}}</div></td>
           <td><strong>{{fruit.price | currency:UDS:true}}</strong></td>
           <td><a class="actions">add to cart</a></td>
