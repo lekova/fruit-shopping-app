@@ -30,3 +30,22 @@
 .table-left {
   text-align: left;
 }
+
+.favorite {
+  display: block;
+  float: left;
+  background-image: url('../../assets/heart-empty-icon.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.favorite:hover {
+  cursor: pointer;
+}
+
+.isFavorite {
+  background-image: url('../../assets/heart-fav-icon.png');
+}

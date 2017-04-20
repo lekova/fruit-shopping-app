@@ -5,6 +5,7 @@ export class Fruit {
     public price: number,
     public description: string,
     public calories: number,
+    public favorite: boolean,
     public img?: string,
   ) {}
 }

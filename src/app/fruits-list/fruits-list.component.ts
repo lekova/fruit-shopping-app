@@ -37,4 +37,10 @@ export class FruitsListComponent implements OnInit {
       return x < y ? -1 : x > y ? 1 : 0;
     });
   };
+
+  setFavorite(id: number) {
+    const fruit: Fruit = this.fruits[id];
+    this.fruits[id].favorite = !this.fruits[id].favorite;
+    console.log(this.fruits[id].name, ' = ', this.fruits[id].favorite);
+  }
 }
