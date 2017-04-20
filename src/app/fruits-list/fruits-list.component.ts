@@ -10,6 +10,8 @@ import { FruitService } from '../services/fruit.service';
 export class FruitsListComponent implements OnInit {
   fruits: Fruit[] = [];
   selectedFruit: Fruit;
+  isWishList: boolean;
+  showListText: string = 'Wish';
 
   constructor(private fruitService: FruitService) { }
 
@@ -42,5 +44,20 @@ export class FruitsListComponent implements OnInit {
     const fruit: Fruit = this.fruits[id];
     this.fruits[id].favorite = !this.fruits[id].favorite;
     console.log(this.fruits[id].name, ' = ', this.fruits[id].favorite);
+    
+  }
+
+  showWishList() {
+
+    if(this.isWishList) {
+      this.getFruits();
+      this.isWishList = !this.isWishList;
+      this.showListText = 'Wish';
+      return;
+    }
+    this.fruits = this.fruits.filter(el => el.favorite);
+    console.log(this.fruits);
+    this.isWishList = !this.isWishList;
+    this.showListText = 'Full';
   }
 }

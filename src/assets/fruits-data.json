@@ -24,7 +24,7 @@
     "description": "These are rich in Potassium and easy to peel.",
     "img": "../assets/products/banana.jpg",
     "calories": 105,
-    "favorite": false
+    "favorite": true
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "Delicious and refreshing.",
     "img": "../assets/products/cantaloupe.jpg",
     "calories": 95,
-    "favorite": false
+    "favorite": true
   },
   {
     "id": 5,
