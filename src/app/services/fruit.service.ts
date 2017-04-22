@@ -21,10 +21,13 @@ export class FruitService {
   }
 
   getFruit(id: number): Promise<Fruit> {
-    const url = `${this.fruitsUrl}/${id}`;
-    return this.http.get(url)
+    // const url = `${this.fruitsUrl}/${id}`;
+    return this.http.get(this.fruitsUrl)
       .toPromise()
-      .then(response => response.json().data as Fruit)
+      .then(response => {
+        const allFruits = response.json() as Fruit[];
+        return allFruits.find(el => el.id === id) as Fruit;
+      })
       .catch(this.handleError);
   }
 
