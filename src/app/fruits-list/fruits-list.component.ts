@@ -40,8 +40,12 @@ export class FruitsListComponent implements OnInit {
   };
 
   setFavorite(id: number) {
-    const fruit: Fruit = this.fruits[id];
-    this.fruits[id].favorite = !this.fruits[id].favorite;
+    this.fruits.map((el) => {
+      if(el.id === id) {
+        el.favorite = !el.favorite
+      }
+    });
+    // TODO: Should raise event so the fruit component knows about the change
   }
 
   showWishList() {
