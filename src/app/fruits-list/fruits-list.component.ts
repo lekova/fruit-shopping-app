@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Fruit } from '../shared/fruit';
 import { FruitService } from '../services/fruit.service';
 
@@ -13,7 +15,8 @@ export class FruitsListComponent implements OnInit {
   isWishList: boolean;
   showListText = 'Wish';
 
-  constructor(private fruitService: FruitService) { }
+  constructor(private router: Router,
+    private fruitService: FruitService) { }
 
   ngOnInit() {
     this.getFruits();
@@ -46,6 +49,12 @@ export class FruitsListComponent implements OnInit {
       }
     });
     // TODO: Should raise event so the fruit component knows about the change
+  }
+
+  showFruit() {
+    this.router.navigate(['/fruit/', this.selectedFruit.id])
+    .then((successful) => console.log('route success', successful))
+    .catch(problem => console.log('problem is ', problem));
   }
 
   showWishList() {
