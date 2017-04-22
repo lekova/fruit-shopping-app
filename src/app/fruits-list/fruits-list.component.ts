@@ -11,7 +11,7 @@ export class FruitsListComponent implements OnInit {
   fruits: Fruit[] = [];
   selectedFruit: Fruit;
   isWishList: boolean;
-  showListText: string = 'Wish';
+  showListText = 'Wish';
 
   constructor(private fruitService: FruitService) { }
 
@@ -24,7 +24,6 @@ export class FruitsListComponent implements OnInit {
   }
 
   onSelect(fruit: Fruit): void {
-    // console.log('selected fruit is ', fruit);
     this.selectedFruit = fruit;
   }
 
@@ -43,20 +42,16 @@ export class FruitsListComponent implements OnInit {
   setFavorite(id: number) {
     const fruit: Fruit = this.fruits[id];
     this.fruits[id].favorite = !this.fruits[id].favorite;
-    console.log(this.fruits[id].name, ' = ', this.fruits[id].favorite);
-    
   }
 
   showWishList() {
-
-    if(this.isWishList) {
+    if (this.isWishList) {
       this.getFruits();
       this.isWishList = !this.isWishList;
       this.showListText = 'Wish';
       return;
     }
     this.fruits = this.fruits.filter(el => el.favorite);
-    console.log(this.fruits);
     this.isWishList = !this.isWishList;
     this.showListText = 'Full';
   }
