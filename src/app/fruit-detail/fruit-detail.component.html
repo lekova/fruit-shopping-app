@@ -1,9 +1,12 @@
 <div class="container" *ngIf="fruit">
   <div class="row-fluid ">
-    <div class="col-md-8">
+    <div class="col-md-7">
       <p class="text-info">
         <img src="{{fruit.img}}" alt="{{fruit.name}}"> <strong>{{fruit.name}}</strong>: {{fruit.description}}
       </p>
+    </div>
+    <div class="col-md-1">
+        <div class="favorite" [ngClass]="{'isFavorite': fruit.favorite}" (click)="setFavorite(fruit.id)"></div>
     </div>
     <div class="col-md-4">
       <p class="alert alert-warning price-box">{{fruit.price | currency:USD:true}}</p>

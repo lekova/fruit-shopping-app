@@ -18,7 +18,7 @@ export class FruitDetailComponent implements OnInit {
               private location: Location) { }
 
   ngOnInit() {
-    this.route.params.switchMap((params: Params) => 
+    this.route.params.switchMap((params: Params) =>
       this.fruitService.getFruit(+params['id']))
     .subscribe(fruit => this.fruit = fruit as Fruit);
   }

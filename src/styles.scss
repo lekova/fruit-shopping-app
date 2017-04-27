@@ -42,3 +42,28 @@ a.actions {
 .border-blue {
     border: 1px solid blue;
 }
+
+.favorite {
+  display: flex;
+  float: left;
+  background-image: url('./assets/heart-empty-icon.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  vertical-align: middle;
+}
+
+.favorite:hover {
+  cursor: pointer;
+}
+
+.isFavorite {
+  background-image: url('./assets/heart-fav-icon.png');
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+}
