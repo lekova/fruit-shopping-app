@@ -18,7 +18,7 @@
         <tbody>
           <tr class="well">
             <td class="tdRight" colspan="3">
-              <a href="./cart.html" title="go to shopping cart">
+              <a [routerLink]="['/cart']" title="go to shopping cart">
                 <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16757-200.png" alt="" class="shopping-cart">
                 <b>15</b> items, <b>$90.00</b>
               </a>
@@ -69,7 +69,7 @@
 
           <tr class="well">
             <td class="tdRight" colspan="3">
-              <a href="cart.html" title="go to shopping cart">
+              <a [routerLink]="['/cart']" title="go to shopping cart">
                 <b>15</b> items, <b>$90.00</b>
               </a>
             </td>
@@ -80,14 +80,17 @@
     <!-- buttons -->
     <div class="col-md-4">
       <button class="btn btn-block btn-success">
-              <i class="icon-shopping-cart icon-white"></i> add to cart
-          </button>
+        <i class="icon-shopping-cart icon-white"></i> Add to Cart
+      </button>
+      <button class="btn btn-block btn-danger">
+        <i class="icon-shopping-cart icon-white"></i> Go to Cart
+      </button>
       <button class="btn btn-block btn-info">
-              <i class="icon-trash icon-white"></i> add to wish list
-          </button>
+        <i class="icon-trash icon-white"></i> Add to Wish List
+      </button>
       <button class="btn btn-block btn-warning" (click)="back()">
-              <i class="icon-chevron-left"></i> back to store
-          </button>
+        <i class="icon-chevron-left"></i> Back to Store
+      </button>
     </div>
   </div>
 </div>
