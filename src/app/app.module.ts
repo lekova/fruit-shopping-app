@@ -9,12 +9,14 @@ import { FruitDetailComponent } from './fruit-detail/fruit-detail.component';
 import { FruitsListComponent } from './fruits-list/fruits-list.component';
 
 import { FruitService } from './services/fruit.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FruitDetailComponent,
-    FruitsListComponent
+    FruitsListComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
