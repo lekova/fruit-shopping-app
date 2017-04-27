@@ -44,8 +44,8 @@ export class FruitsListComponent implements OnInit {
 
   setFavorite(id: number) {
     this.fruits.map((el) => {
-      if(el.id === id) {
-        el.favorite = !el.favorite
+      if (el.id === id) {
+        el.favorite = !el.favorite;
       }
     });
     // TODO: Should raise event so the fruit component knows about the change
