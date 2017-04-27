@@ -1,6 +1,5 @@
 # Fruit Shopping App
-# <p align="center"> <img src="./src/assets/fruits.jpg" alt="fruits" width=150px height=150px/></p>
-
+![alt text](./fruit-shopping-app.png "Fruit Shopping App")
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
