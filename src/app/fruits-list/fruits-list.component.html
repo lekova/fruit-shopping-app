@@ -25,7 +25,7 @@
           </button>
           <ul class="dropdown-menu">
             <li (click)="sortByName()"><a>Name</a></li>
-            <li (click)="sortByPrice()"><a href="#">Price</a></li>
+            <li (click)="sortByPrice()"><a>Price</a></li>
           </ul>
         </div>
       </div>
@@ -57,7 +57,7 @@
             <td class="col-xs-1"><strong>{{fruit.price | currency:UDS:true}}</strong></td>
             <td class="col-xs-2">
               <div class="col-sm-8">
-                <a class="actions">add to cart</a>
+                <a class="actions" (click)="addToCart(fruit)">add to cart</a>
               </div>
               <div class="col-sm-4 ">
                 <div class="favorite" [ngClass]="{'isFavorite': fruit.favorite}" (click)="setFavorite(fruit.id)"></div>

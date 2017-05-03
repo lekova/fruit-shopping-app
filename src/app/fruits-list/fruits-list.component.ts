@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
 import { Fruit } from '../shared/fruit';
+import { CartItem } from '../shared/cart';
 import { FruitService } from '../services/fruit.service';
 
 @Component({
@@ -70,5 +71,10 @@ export class FruitsListComponent implements OnInit {
     this.fruits = this.fruits.filter(el => el.favorite);
     this.isWishList = !this.isWishList;
     this.showListText = 'Full';
+  }
+
+  addToCart(fruit: Fruit) {
+    const cartItem = new CartItem(fruit, 1);
+    console.log(fruit);
   }
 }
