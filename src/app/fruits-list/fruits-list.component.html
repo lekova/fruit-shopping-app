@@ -5,9 +5,18 @@
     <br> When you are done, click the shopping cart icon to review your order and check out.
   </p>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-4">
       <div class="search-box">
-        <input class="form-control" placeholder="Search Fruits..." type="text">
+        <input class="form-control" placeholder="Search Fruits..." type="text"
+        #search (keyup)="onKeyUp(search.value)">
+        <p>{{values}}</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="search-box">
+        <input class="form-control" placeholder="Filter List..." type="text" [(ngModel)]="textFilter">
+        <p>{{values}}</p>
       </div>
     </div>
     <div class="col-md-2">
@@ -43,7 +52,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let fruit of fruits; let i = index">
+          <tr *ngFor="let fruit of fruits | filterByText: textFilter; let i = index">
             <td class="col-xs-1">{{i + 1}}</td>
             <td class="col-xs-1"><img src="{{fruit.img}}" alt="{{fruit.name}}" [routerLink]="['/fruit/', fruit.id]"></td>
             <td class="col-xs-2"><a class="actions" [routerLink]="['/fruit/', fruit.id]">{{fruit.name}}</a></td>

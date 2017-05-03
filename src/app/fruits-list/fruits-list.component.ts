@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 import { Fruit } from '../shared/fruit';
 import { FruitService } from '../services/fruit.service';
@@ -14,6 +16,7 @@ export class FruitsListComponent implements OnInit {
   selectedFruit: Fruit;
   isWishList: boolean;
   showListText = 'Wish';
+  private textFilter = '';
 
   constructor(private router: Router,
     private fruitService: FruitService) { }

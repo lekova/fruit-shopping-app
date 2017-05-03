@@ -10,13 +10,15 @@ import { FruitsListComponent } from './fruits-list/fruits-list.component';
 
 import { FruitService } from './services/fruit.service';
 import { CartComponent } from './cart/cart.component';
+import { FilterByTextPipe } from './pipes/filter-by-text.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FruitDetailComponent,
     FruitsListComponent,
-    CartComponent
+    CartComponent,
+    FilterByTextPipe
   ],
   imports: [
     BrowserModule,
