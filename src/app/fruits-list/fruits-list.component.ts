@@ -6,6 +6,7 @@ import { Subject } from 'rxjs/Subject';
 import { Fruit } from '../shared/fruit';
 import { CartItem } from '../shared/cart';
 import { FruitService } from '../services/fruit.service';
+import { LocalStorage } from '../services/web-storage.decorator';
 
 @Component({
   selector: 'app-fruits-list',
@@ -18,6 +19,7 @@ export class FruitsListComponent implements OnInit {
   isWishList: boolean;
   showListText = 'Wish';
   private textFilter = '';
+  @LocalStorage() public lastSearchQuery:Object = {};
 
   constructor(private router: Router,
     private fruitService: FruitService) { }
