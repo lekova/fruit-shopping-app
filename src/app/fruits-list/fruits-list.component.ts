@@ -80,12 +80,12 @@ export class FruitsListComponent implements OnInit {
       this.cart = new Cart([new CartItem(fruit, 1)], fruit.price);
     } else {
       const cartItem = new CartItem(fruit, 1);
-      let tempCart = this.cart as Cart;
-      let tempCarItems = tempCart.cartItems as CartItem[];
+      const tempCart = this.cart as Cart;
+      const tempCarItems = tempCart.cartItems as CartItem[];
 
-      let index = tempCarItems.findIndex(el => el.item.id == fruit.id);
-      if(index) {
-        tempCarItems[index].count = tempCarItems[index].count++;
+      const index = tempCarItems.findIndex(el => el.item.id === fruit.id);
+      if (index >= 0) {
+        tempCarItems[index].count = ++tempCarItems[index].count;
         tempCarItems[index].total = tempCarItems[index].total += fruit.price;
       } else {
         tempCarItems.push(cartItem);
