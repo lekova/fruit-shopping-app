@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
 import { Fruit } from '../shared/fruit';
-import { CartItem } from '../shared/cart';
+import { Cart, CartItem } from '../shared/cart';
 import { FruitService } from '../services/fruit.service';
 import { LocalStorage } from '../services/web-storage.decorator';
 
@@ -19,7 +19,7 @@ export class FruitsListComponent implements OnInit {
   isWishList: boolean;
   showListText = 'Wish';
   private textFilter = '';
-  @LocalStorage() public lastSearchQuery:Object = {};
+  @LocalStorage() public cart: Cart = null;
 
   constructor(private router: Router,
     private fruitService: FruitService) { }
@@ -76,7 +76,25 @@ export class FruitsListComponent implements OnInit {
   }
 
   addToCart(fruit: Fruit) {
-    const cartItem = new CartItem(fruit, 1);
-    console.log(fruit);
+    if(this.cart == null) {
+      this.cart = new Cart([new CartItem(fruit, 1)], fruit.price);
+    } else {
+      const cartItem = new CartItem(fruit, 1);
+      let tempCart = this.cart as Cart;
+      let tempCarItems = tempCart.cartItems as CartItem[];
+
+      let index = tempCarItems.findIndex(el => el.item.id == fruit.id);
+      if(index) {
+        tempCarItems[index].count = tempCarItems[index].count++;
+        tempCarItems[index].total = tempCarItems[index].total += fruit.price;
+      } else {
+        tempCarItems.push(cartItem);
+      }
+
+      tempCart.cartItems = tempCarItems;
+      tempCart.totalAmount += fruit.price;
+      this.cart = tempCart;
+      console.log('this.cart items ', this.cart.cartItems);
+    }
   }
 }
